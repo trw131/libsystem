@@ -1,0 +1,20 @@
+<view class="container">
+<view class="qiandao">
+    <map class='map' id='myMap' longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" 
+ show-location="true" markers="{{markers}}" bindmarkertap="bindMakertap" bindcontroltap='controlTap' 
+ bindregionchange='regionChange' controls='{{controls}}'
+      bindtap='bindMapTap'scale="16"></map>
+      <view class="circle">
+          <view class="circle2" bindtap="qiandao">
+              <view class="time">{{time}}</view>
+              <view class="textqiandao">签到</view>
+          </view>
+          
+
+      </view>
+</view>
+
+
+
+
+</view>

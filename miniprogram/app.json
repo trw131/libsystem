@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/bangding/bangding",
+    "pages/geren/geren",
+    "pages/gotoLuntan/gotoLuntan",
+    "pages/gotoGuanli/gotoGuanli",
+    "pages/gotoYijian/gotoYijian",
+    "pages/gotoJiancha/gotoJiancha",
+    "pages/tongxunlu/tongxunlu"
+  ],
+  "window": {
+    "backgroundColor": "#13559B",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#13559B",
+    "navigationBarTitleText": "开放性实验管理平台",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "style/img/button/home2.png",
+        "selectedIconPath": "style/img/button/home1.png"
+      },
+      {
+        "text": "通讯录",
+        "pagePath": "pages/tongxunlu/tongxunlu",
+        "iconPath": "style/img/button/tongxunlu2.png",
+        "selectedIconPath": "style/img/button/tongxunlu1.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/im/im",
+        "iconPath": "style/img/button/im2.png",
+        "selectedIconPath": "style/img/button/im1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置将用于实验室签到"
+    }
+  }
+}

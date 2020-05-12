@@ -1,0 +1,102 @@
+
+
+
+
+<view class="container">
+    <view class="welcome font30 mb100">欢迎来到实验室管理系统</view>
+        <view class="welcome font14 mb100">请绑定学号</view>
+   <form bindsubmit="formSubmit">
+  <view class=" p-lr30 border-all">
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">姓名</label>
+      <input type="text" name="name" class="ml40 flex1" placeholder="请输入姓名" bindinput="getNameValue"></input>
+    </view>
+ 
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">手机号码</label>
+      <input type="text" name="phoneNumber"class="ml40 flex1" maxlength="11" placeholder="请输入手机号码" bindinput="getPhoneValue"></input>
+    </view>
+ 
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">所在班级</label>
+         <input type="text"name="class" class="ml40 flex1" placeholder="例：电信162" bindinput="getClassValue"></input>
+      </view>
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">学号</label>
+      <input type="text"name="classId" class="ml40 flex1" placeholder="请输入学号" maxlength="12"bindinput="getClassIDValue"></input>
+    </view>
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">实验室</label>
+      <input type="text"name="lab" class="ml40 flex1" placeholder="例：科西610" maxlength="12"bindinput="getLabValue"></input>
+    </view>
+  </view>
+  <button form-type="submit" class="combtn font16 color-fff _w100 bg-btn" data-url="../addNewAddress/addNewAddress" >
+    保存
+  </button>
+  </form>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view class="container">
+<view class="welcome">欢迎来到山建开放性实验室</view>
+<form class="bangding">
+<view >请输入姓名</view>
+<input class="input" name="name"placeholder="输入真实姓名" />
+
+<view >请输入性别</view>
+<input class="input" name="sex"placeholder="输入真实性别" />
+
+<view >请输入班级</view>
+<input class="input" name="class"placeholder="例如电信162" />
+
+<view >请输入学号</view>
+<input class="input" name="schoolId"placeholder="输入学号" />
+<view >请输入手机号</view>
+<input class="input" name="phoneNumber"placeholder="输入本人手机号" />
+
+
+</form>
+
+
+</view> -->

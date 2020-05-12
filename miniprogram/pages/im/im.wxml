@@ -1,0 +1,37 @@
+<view class="container">
+<view class="topbar" >
+  <view class="userPhoto" style="background-image:url({{avatarUrl}})"></view>
+  <view class="nickname">{{nickname}}</view>
+</view>
+
+<!-- <view class="tips msg ">个人信息</view>
+<view class="tips luntan  ">我的论坛</view>
+<view class="tips jianyi  ">意见建议</view>
+<view class="tips update  ">检查更新</view> -->
+<view class="person-list">
+    <view class="list-item">
+      <text class="item-text" bindtap="gotoGeren">个人信息</text>
+    </view>
+    <view class="person-line"></view>
+    </view>
+    <view class="person-list">
+    <view class="list-item">
+      <text class="item-text" bindtap="gotoLuntan">我的论坛</text>
+    </view>
+    <view class="person-line"></view>
+    </view>
+    <view class="guanli person-list" style="display:{{status}}" >
+    <view class="list-item">
+      <text class="item-text" bindtap="gotoGuanli">系统管理</text>
+    </view>
+    <view class="person-line"></view>
+    </view>
+    <view class="person-list">
+    <view class="list-item">
+      <text class="item-text" bindtap="gotoYijian">意见建议</text>
+    </view>
+    <view class="person-line"></view>
+    
+    
+    </view>
+</view>

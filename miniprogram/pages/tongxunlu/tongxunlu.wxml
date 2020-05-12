@@ -1,0 +1,4 @@
+<!--miniprogram/pages/tongxunlu/tongxunlu.wxml-->
+<view class="list" wx:for="{{list}}">
+{{item.name}}电话{{item.phoneNumber}}
+</view>
