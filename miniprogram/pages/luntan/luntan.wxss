@@ -1,1 +1,13 @@
 /* miniprogram/pages/luntan/luntan.wxss */
+.page{
+    width: 100%;
+    height: 100%;
+
+}
+.shigong{
+    top: 50%-230rpx;
+    width: 400rpx;
+    height: 460rpx;
+    margin-top: 50%;
+    margin-left: 20%;
+}

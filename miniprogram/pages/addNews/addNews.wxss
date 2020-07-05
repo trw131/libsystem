@@ -1,0 +1,25 @@
+/* miniprogram/pages/addNews/addNews.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.container,.addtitle{
+    width: 100%;
+    height: 100%;
+}
+.text{
+    font-size: 50rpx;
+
+}
+.title{
+    margin: 30prx auto;
+    width: 100%;
+    height: 100rpx;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.context{
+    margin: 30rpx auto;
+    width: 100%;
+    height: 700rpx;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

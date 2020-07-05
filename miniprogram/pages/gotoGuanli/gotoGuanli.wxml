@@ -1,2 +1,26 @@
-<!--miniprogram/pages/gotoGuanli/gotoGuanli.wxml-->
-<text>miniprogram/pages/gotoGuanli/gotoGuanli.wxml</text>
+<view class="container">
+<view class="barleft">
+<view class="sort" wx:for="{{sort}}" data-sort="{{item.allsort}}"bindtap="getDevice">{{item.allsort}}</view>
+<view class="sort">
+<view class="addsort " style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/jiahao.png')" bindtap="addsort"></view>
+</view>
+
+</view>
+<view class="barright">
+<view class="device"wx:for="{{device}}">
+<view class="deviceName">{{item.device}}</view>
+<view class="remainlist">
+    <view class="remain">库存剩余：{{item.remain}}</view>
+        <slider bindchange="sliderchange" data-doc="{{item._id}}"data-device="{{item.device}}" data-remain="{{item.remain}}" show-value value="{{slider}}"/>
+        </view>
+</view>
+<view class="device">
+    <view class="adddevice"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/jiahao.png')" bindtap="adddevice"></view>
+</view>
+</view>
+<view class="HUBscore" class="combtn font16 color-fff _w100 bg-btn" bindtap="HuBscore" >
+    查看记录
+  </view>
+
+
+</view> 

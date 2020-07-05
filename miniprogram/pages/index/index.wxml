@@ -26,14 +26,25 @@
 <view class="text">新闻</view></view>
 <view class="cangku"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/cangku.jpg')" bindtap="gotocangku">
 <view class="text">仓库</view></view>
-<view class="luntan"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/luntan.jpg')" bindtap="gotoluntan">
-<view class="text">论坛</view></view>
+<!-- <view class="luntan"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/luntan.jpg')" bindtap="gotoluntan">
+<view class="text">论坛</view></view> -->
 <view class="xiaoli"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/xiaoli.jpg')" bindtap="gotoxiaoli">
 <view class="text">校历</view></view>
 <view class="liaotianshi"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/liaotianshi.jpg')" bindtap="gotoliaotianshi">
 <view class="text">聊天</view></view>
 </view>
-<view class="bar"></view>
+<view class="news" wx:for="{{news}}"bindtap="getxinwen"data-newsid="{{item._id}}">
+  <view class="topbar">
+    <view class="img"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/xinwenicon.jpg')"></view>
+    <view class="bartext">通知</view>
+  </view>
+<view class="title">{{item.title}}</view>
+<!-- <view class="context">{{item.context}}</view> -->
+<view class="bar">
+<view class="name">{{item.name}}</view>
+<view class="time">{{item.time}}</view>
+</view>
+</view>
   <!-- 上传图片 -->
   <!-- <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">

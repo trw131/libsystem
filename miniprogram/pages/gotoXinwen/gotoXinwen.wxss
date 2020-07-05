@@ -1,4 +1,6 @@
-/* miniprogram/pages/xinwen/xinwen.wxss */
+page{
+    height: 100%;
+}
 .list{
     height: 80%;
     margin: 10rpx 2rpx;
@@ -7,7 +9,7 @@
 .news{
     height: 300rpx;
     margin: 35rpx auto;
-    border: 2px solid rgba(0, 0, 255, 0.1);
+    border: 2px solid 	#54FF9F;
     border-radius: 10px;
 }
 .title{

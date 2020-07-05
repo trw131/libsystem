@@ -1,1 +1,52 @@
-/* miniprogram/pages/cangku/cangku.wxss */
+page{
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.barleft{
+    width: 30%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+.barright{
+    width: 70%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sort{
+    display: flex;
+    height: 100rpx;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40rpx auto;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+}
+.sort:hover{
+    background-color: #888;
+    color: aqua;
+}
+.device{
+    display: flex;
+    flex-direction: column;
+    height: 180rpx;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40rpx auto;
+    font-size: 17px;
+    /* justify-content: center;
+    align-items: center; */
+}
+/* .remainlist{
+    display: flex;
+
+
+} */
+.addbutton{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: auto
+}

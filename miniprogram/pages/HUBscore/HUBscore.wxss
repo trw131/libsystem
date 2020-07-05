@@ -1,5 +1,5 @@
 /* miniprogram/pages/tongxunlu/tongxunlu.wxss */
-.list{
+.score{
     width: 95%;
     margin: 5rpx auto;
     border: 1px solid rgba(0, 0, 255, 0.1);
@@ -7,6 +7,6 @@
     padding: 5rpx;
 
 }
-.filename,.phone{
+.name,.time{
     margin: 2rpx;
 }

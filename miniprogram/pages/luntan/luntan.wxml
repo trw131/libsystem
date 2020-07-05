@@ -1,2 +1,5 @@
 <!--miniprogram/pages/luntan/luntan.wxml-->
-<text>miniprogram/pages/luntan/luntan.wxml</text>
+<view class="page">
+<view class="shigong"style="background-image:url('https://7364-sdjzlab-7hurq-1302091807.tcb.qcloud.la/download.png')"></view>
+<view class="text">正在施工……</view>
+</view>

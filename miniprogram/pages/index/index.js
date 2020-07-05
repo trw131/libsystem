@@ -15,6 +15,13 @@ Page({
       {url:'cloud://sdjzlab-7hurq.7364-sdjzlab-7hurq-1302091807/4.jpg'} ,
     ]
   },
+  getxinwen:function(e){
+    app.globalData.newsid=e.currentTarget.dataset.newsid;
+    console.log(app.globalData.newsid)
+    wx.navigateTo({
+      url: '/pages/getXinwen/getXinwen'
+    })
+  },
   gotoqiandao:function(){
     
     wx.navigateTo({
@@ -46,6 +53,7 @@ Page({
                 url: '/pages/im/room/room',    
                 })
               },
+              
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({
@@ -70,6 +78,14 @@ Page({
         }
       }
     })
+    db.collection('Xinwen').limit(5).orderBy('time', 'desc').get({
+      success: res=>{
+        console.log(res)
+        this.setData({
+          news:res.data
+        })
+      }
+    })
   },
   onReady:function (){
     wx.cloud.callFunction({
@@ -78,43 +94,43 @@ Page({
       success: res => {       
         console.log('[云函数] [login] user openid: ', res.result.openid)
         app.globalData.openid = res.result.openid
-        
+        db.collection('user').where({
+          _openid:app.globalData.openid}).get({
+            success: res=>{
+              if(res.data.length=='0'){
+                console.log(3)
+                wx.navigateTo({
+                url: '/pages/bangding/bangding',
+              })
+            }else{
+                app.globalData.name = res.data[0].name;
+                app.globalData.class = res.data[0].class;
+                app.globalData.classId = res.data[0].classId;
+                app.globalData.lab = res.data[0].lab;
+                app.globalData.phoneNumber = res.data[0].phoneNumber;
+                app.globalData.identity = res.data[0].identity;
+                this.setData({
+                  name:app.globalData.name
+                })
+                console.log("登陆成功")
+                  wx.showToast({
+                  icon:"success",
+                  title:"登陆成功"
+             })
+            }
+             
+            },
+            fail: err=>{
+             console.log(err)
+            }
+            }
+          )
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
       }
     })
-    db.collection('user').where({
-      _openid:app.globalData.openid}).get({
-        success: res=>{
-          if(res.data.length=='0'){
-            console.log(3)
-            wx.navigateTo({
-            url: '/pages/bangding/bangding',
-          })
-        }else{
-            app.globalData.name = res.data[0].name;
-            app.globalData.class = res.data[0].class;
-            app.globalData.classId = res.data[0].classId;
-            app.globalData.lab = res.data[0].lab;
-            app.globalData.phoneNumber = res.data[0].phoneNumber;
-            app.globalData.identity = res.data[0].identity;
-            this.setData({
-              name:app.globalData.name
-            })
-            console.log("登陆成功")
-              wx.showToast({
-              icon:"success",
-              title:"登陆成功"
-         })
-        }
-         
-        },
-        fail: err=>{
-         console.log(err)
-        }
-        }
-      )
+    
 
     
   },

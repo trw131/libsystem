@@ -1,0 +1,7 @@
+<view class="score" wx:for="{{score}}">
+        <view class="title">{{item.device}}</view>
+        <view class="bar">
+            <view class="name">{{item.name}}</view>
+            <view class="time">{{item.time}}</view>
+        </view>
+</view>

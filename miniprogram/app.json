@@ -19,7 +19,12 @@
     "pages/gotoGuanli/gotoGuanli",
     "pages/gotoYijian/gotoYijian",
     "pages/gotoJiancha/gotoJiancha",
-    "pages/tongxunlu/tongxunlu"
+    "pages/tongxunlu/tongxunlu",
+    "pages/gotoXinwen/gotoXinwen",
+    "pages/getXinwen/getXinwen",
+    "pages/addNews/addNews",
+    "pages/HUBscore/HUBscore",
+    "pages/gototianqi/gototianqi"
   ],
   "window": {
     "backgroundColor": "#13559B",

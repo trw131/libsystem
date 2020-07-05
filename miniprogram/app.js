@@ -23,6 +23,7 @@ App({
       lab:'',
       phoneNumber:'',
       identity:'',
+      newsid:''
     }
   }
 })

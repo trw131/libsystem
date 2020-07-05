@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="addtitle">
+        <form bindsubmit="formSubmit">
+        <view class="text">请输入标题：</view>
+        <input type="text" name="title" class="title" placeholder="请输入标题" bindinput="gettitle"></input>
+        <view class="text">请输入内容</view>
+        <textarea type="text" name="context" class="context" placeholder="请输入内容" bindinput="getcontext"></textarea>
+        <!-- <button class="addadjunct" ></button>> -->
+        <button form-type="submit" class="combtn font16 color-fff _w100 bg-btn" > 提交 </button>  
+   
+  
+        
+        
+        </form>
+    </view>
+</view>

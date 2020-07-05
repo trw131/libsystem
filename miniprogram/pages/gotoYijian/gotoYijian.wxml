@@ -1,2 +1,3 @@
-<!--miniprogram/pages/gotoYijian/gotoYijian.wxml-->
-<text>miniprogram/pages/gotoYijian/gotoYijian.wxml</text>
+<form class="form" bindsubmit="formsubmit"></form>
+<textarea class="yijian"></textarea>
+<button class="button"bindtap="submit"></button>

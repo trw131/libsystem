@@ -1,0 +1,13 @@
+/* miniprogram/pages/getXinwen/getXinwen.wxss */
+.title{
+    font-size: 60rpx;
+    text-align: center;
+}
+.context{
+    text-indent: 60rpx;
+    margin: 30rpx
+    
+}
+.name,.time{
+    margin-left: auto;
+}

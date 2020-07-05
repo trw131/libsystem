@@ -15,8 +15,23 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  copy:function(e){
+    var $phone = e.currentTarget.dataset.phone
+    console.log($phone)
+    wx.setClipboardData({
+      data:$phone,
+      success: res=>{
+        wx.showToast({
+          icon:'success',
+          title:'复制成功'
+        })
+      }
+    })
+  },
+
+
   onLoad: function (options) {
-    db.collection('user').get({
+    db.collection('user').limit(200).orderBy('name', 'asc').get({
       success: res=>{
         console.log(res)
         this.setData({

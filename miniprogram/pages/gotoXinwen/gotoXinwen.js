@@ -1,6 +1,6 @@
-// miniprogram/pages/xinwen/xinwen.js
-const app = getApp()
+// miniprogram/pages/gotoXinwen/gotoXinwen.js
 const db = wx.cloud.database()
+const app = getApp()
 Page({
 
   /**
@@ -16,12 +16,30 @@ Page({
       url: '/pages/getXinwen/getXinwen'
     })
   },
-  
+  onPullDownRefresh: function () {
+    this.clearCache();
+    this.getXinwen();//第一次加载数据
+  },
+  addNews: function(){
+    wx.navigateTo({
+      url: '/pages/addNews/addNews',    
+      })
+  },
+  getXinwen:function(){
+    db.collection('Xinwen').limit(20).orderBy('time', 'desc').get({
+      success: res=>{
+        console.log(res)
+        this.setData({
+          news:res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    db.collection('Xinwen').limit(100).orderBy('time', 'desc').get({
+    db.collection('Xinwen').limit(20).orderBy('time', 'desc').get({
       success: res=>{
         console.log(res)
         this.setData({

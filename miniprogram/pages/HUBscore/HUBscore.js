@@ -1,6 +1,8 @@
-// miniprogram/pages/xinwen/xinwen.js
-const app = getApp()
+// miniprogram/pages/tongxunlu/tongxunlu.js
 const db = wx.cloud.database()
+
+
+
 Page({
 
   /**
@@ -9,23 +11,16 @@ Page({
   data: {
 
   },
-  getxinwen:function(e){
-    app.globalData.newsid=e.currentTarget.dataset.newsid;
-    console.log(app.globalData.newsid)
-    wx.navigateTo({
-      url: '/pages/getXinwen/getXinwen'
-    })
-  },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    db.collection('Xinwen').limit(100).orderBy('time', 'desc').get({
+    db.collection('HUBscore').limit(200).orderBy('time', 'deasc').get({
       success: res=>{
         console.log(res)
         this.setData({
-          news:res.data
+          score:res.data
         })
       }
     })

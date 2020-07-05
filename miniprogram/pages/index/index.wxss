@@ -186,3 +186,54 @@ page {
 .qiandao{
   background-image: url(cloud://sdjzlab-7hurq.7364-sdjzlab-7hurq-1302091807/qiandao.jpg)
 }
+.list{
+  height: 80%;
+  margin: 10rpx 2rpx;
+  border:1px solid rgba(0, 0, 0, 0.1)
+}
+.news{
+  position: relative;
+  height: 169rpx;
+  width: 95%;
+  margin: 35rpx auto;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.title{
+  width: 100%;
+  font-size: 50rpx;
+  text-align: center;
+  margin: auto;
+  border-bottom:1px solid rgba(0, 0, 0, 0.1)   
+}
+.context{
+  margin: 10rpx 0rpx;
+  text-align: left;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) ;
+}
+.bar{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 30rpx;
+  color: #999;
+}
+.time{
+  right: 0;
+  bottom: 0;
+}
+.img{
+  width: 50rpx;
+  height: 50rpx;
+}
+.topbar{
+  height: 50rpx;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

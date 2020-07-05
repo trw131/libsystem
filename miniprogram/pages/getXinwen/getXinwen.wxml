@@ -1,0 +1,4 @@
+<view class="title">{{title}}</view>
+<view class="context">{{context}}</view>
+<view class="name">{{name}}</view>
+<view class="time">{{time}}</view>

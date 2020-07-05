@@ -9,4 +9,7 @@
 </view>
 </view>
 </view>
+<view class="combtn font16 color-fff _w100 bg-btn" bindtap='addNews' >
+    添加新闻
+  </view>
 </view>

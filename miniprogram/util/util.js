@@ -1,6 +1,6 @@
 function formatTime(date) {
     var month = date.getMonth()
-    var day =date.getDay()
+    var day =date.getDate()
     var hour = date.getHours()
     var minute = date.getMinutes()
     var second = date.getSeconds()
@@ -10,7 +10,7 @@ function formatTime(date) {
   function formatDate(date) {
     var year = date.getFullYear()
     var month = date.getMonth()+1
-    var day =date.getDay()
+    var day =date.getDate()
     var hour = date.getHours()
     var minute = date.getMinutes()
     var second = date.getSeconds()

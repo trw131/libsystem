@@ -1,2 +1,19 @@
-<!--miniprogram/pages/cangku/cangku.wxml-->
-<text>miniprogram/pages/cangku/cangku.wxml</text>
+<view class="container">
+<view class="barleft">
+<view class="sort" wx:for="{{sort}}" data-sort="{{item.allsort}}"bindtap="getDevice">{{item.allsort}}</view>
+</view>
+<view class="barright">
+<view class="device"wx:for="{{device}}">
+<view class="deviceName">{{item.device}}</view>
+<view class="remainlist">
+    <view class="remain">库存剩余：{{item.remain}}</view>
+        <slider bindchange="sliderchange" data-doc="{{item._id}}"data-device="{{item.device}}" data-remain="{{item.remain}}" show-value value="{{slider}}"/>
+        </view>
+
+
+</view>
+</view>
+
+
+
+</view> 

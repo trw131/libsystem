@@ -36,6 +36,16 @@ onGetUserInfo: function(e) {
         url:'/pages/gotoYijian/gotoYijian',
       })
     },
+    gotoXinwen:function(){
+      wx.navigateTo({
+        url:'/pages/gotoXinwen/gotoXinwen',
+      })
+    },
+    gotoJiancha:function(){
+      wx.navigateTo({
+        url:'/pages/gotoJiancha/gotoJiancha',
+      })
+    },
   onLoad: function (options) {
     wx.getSetting({
       success: res => {

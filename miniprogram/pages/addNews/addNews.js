@@ -1,6 +1,7 @@
-// miniprogram/pages/xinwen/xinwen.js
+// miniprogram/pages/addNews/addNews.js
 const app = getApp()
 const db = wx.cloud.database()
+var util = require('../../util/util.js');
 Page({
 
   /**
@@ -9,26 +10,38 @@ Page({
   data: {
 
   },
-  getxinwen:function(e){
-    app.globalData.newsid=e.currentTarget.dataset.newsid;
-    console.log(app.globalData.newsid)
-    wx.navigateTo({
-      url: '/pages/getXinwen/getXinwen'
-    })
+  formSubmit:function(e){
+    var that = this;
+    
+    var formData = e.detail.value;
+    if(formData.name==""||formData.context==""){
+      Wx.showToast({
+        icon:"fail",
+        title:'请检查防止漏填'
+      })
+    }else{
+      db.collection('Xinwen').add({
+        data:{
+          title:formData.title,
+          context:formData.context,
+          name:app.globalData.name,
+          time:util.formatDate(new Date())
+        },
+        success: res=>{
+          console.log("success")
+          wx.showToast({
+            title: '提交成功',
+          })
+          wx.navigateBack()
+        }
+      })
+    }
   },
-  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    db.collection('Xinwen').limit(100).orderBy('time', 'desc').get({
-      success: res=>{
-        console.log(res)
-        this.setData({
-          news:res.data
-        })
-      }
-    })
+
   },
 
   /**
